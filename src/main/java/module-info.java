@@ -1,6 +1,6 @@
-module com.jmsweb.fxml.starter {
-    requires transitive javafx.controls;
+module starter {
     requires javafx.fxml;
+    requires transitive javafx.controls;
     requires transitive javafx.graphics;
 
     opens com.jmsweb.fxml.starter to javafx.fxml;

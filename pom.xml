@@ -5,7 +5,7 @@
     <artifactId>starter</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <properties>
-        <java.version>11</java.version>
+        <java.version>19</java.version>
         <maven.test.skip>true</maven.test.skip>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.release>${java.version}</maven.compiler.release>
@@ -23,6 +23,11 @@
             <artifactId>javafx-fxml</artifactId>
             <version>${java.version}</version>
         </dependency>
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-graphics</artifactId>
+            <version>${java.version}</version>
+        </dependency>
     </dependencies>
     <build>
         <plugins>
@@ -30,9 +35,7 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.8.0</version>
             </plugin>
-            <!-- Value of JAVA_HOME will synch the runtime -->
-            <!-- Usage: mvn clean compile javafx:run -->
-            <!-- Usage: mvn clean compile javafx:jlink -->
+            <!-- Refer to README for Distribution -->
             <plugin>
                 <groupId>org.openjfx</groupId>
                 <artifactId>javafx-maven-plugin</artifactId>
@@ -43,7 +46,7 @@
                     <stripDebug>false</stripDebug>
                     <noManPages>true</noManPages>
                     <launcher>starter-fxml</launcher>
-                    <mainClass>com.jmsweb.fxml.starter/com.jmsweb.fxml.starter.App</mainClass>
+                    <mainClass>starter/com.jmsweb.fxml.starter.App</mainClass>
                     <jlinkImageName>starter-fxml</jlinkImageName>
                     <jlinkZipName>starter-fxml</jlinkZipName>
                 </configuration>
